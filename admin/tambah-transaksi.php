@@ -57,8 +57,8 @@ function generateTransactionCode()
                 <div class="content-wrapper">
                     <!-- Content -->
 
-                    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-                        <div class="card p-4 shadow-lg" style="width: 100%; max-width: 1000px;">
+                    <div class="container d-flex justify-content-center" style="min-height: 55vh;margin-bottom:70px;margin-top:20px">
+                        <div class="card p-4 shadow-lg" style="width: 100%; max-width: 1400px;">
                             <div class="card-header bg-primary opacity-50 text-center">
                                 <h1 class="fw-bold text-light">Add Transaction</h1>
                             </div>
@@ -78,7 +78,7 @@ function generateTransactionCode()
                                     <div class="mb-3 d-flex align-items-center">
                                         <button style="border-radius: 20px;" class="btn btn-primary me-3" type="button"
                                             id="counterBtn">Tambah</button>
-                                        
+
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table table-bordered">
@@ -93,7 +93,7 @@ function generateTransactionCode()
                                                     <th>Sub Total</th>
                                                 </tr>
                                             </thead>
-                                            
+
                                             <tbody id="tbody">
                                                 <!-- Data ditambah disini -->
                                             </tbody>
@@ -311,4 +311,5 @@ function generateTransactionCode()
         <!-- Core JS -->
         <?php include 'inc/js.php' ?>
 </body>
+
 </html>

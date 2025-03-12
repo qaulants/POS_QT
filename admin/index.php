@@ -1,10 +1,11 @@
 <?php session_start();
 include 'koneksi.php';
 
-if(!isset($_SESSION['nama'])){
+if (!isset($_SESSION['nama'])) {
     header("location: login.php?error=access-failed");
 }
-
+$query = mysqli_query($koneksi,  "SELECT * FROM products");
+$produk = mysqli_query($koneksi, "SELECT categories.category_name, products.* FROM products LEFT JOIN categories ON categories.id = products.category_id ORDER BY id DESC");
 $id = $_SESSION['id'];
 $queryUser = mysqli_query($koneksi, "SELECT * FROM users WHERE id='$id'");
 $rowUser = mysqli_fetch_assoc($queryUser);
@@ -77,12 +78,47 @@ $rowUser = mysqli_fetch_assoc($queryUser);
                                                     data-app-light-img="illustrations/man-with-laptop-light.png" />
                                             </div>
                                         </div>
+                                        <!-- <div class="container-xxl flex-grow-1 container-p-y"> -->
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <!-- <div class="card"> -->
+                                                <div class="card-header">
+                                                    <h5>Stok Produk</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>Kategori</th>
+                                                                <th>Nama Produk</th>
+                                                                <th>Jumlah Produk</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php $no = 1;
+                                                            while ($row = mysqli_fetch_assoc($produk)) { ?>
+                                                                <tr>
+                                                                    <td><?php echo $no++ ?></td>
+                                                                    <td><?php echo $row['category_name'] ?></td>
+                                                                    <td><?php echo $row['product_name'] ?></td>
+                                                                    <td><?php echo $row['product_qty'] ?></td>
+                                                                </tr>
+                                                            <?php } ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <!-- </div> -->
+                                            </div>
+                                        </div>
+                                        <!-- </div> -->
                                     </div>
                                 </div>
                             </div>
-                                                        
+
                         </div>
-                        
+
                     </div>
                     <!-- / Content -->
                     <!-- Footer -->

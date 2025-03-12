@@ -28,9 +28,9 @@ $queryDetail = mysqli_query($koneksi, "SELECT * FROM sales");
 
     <?php include 'inc/head.php'; ?>
 
-    
 
-    
+
+
 </head>
 
 <body>
@@ -56,12 +56,18 @@ $queryDetail = mysqli_query($koneksi, "SELECT * FROM sales");
 
                             <div class="col-12 print-area">
                                 <div class="card shadow-lg ">
-                                    <div class="card-header text-center">
+                                    <!-- <div class="card-header text-center">
                                         <h1 style="letter-spacing: -3px" class="fw-bold text-primary">Laporan Penjualan</h1>
+                                    </div> -->
+                                    <div class="card-header text-center d-flex justify-content-between align-items-center">
+                                        <h1 style="letter-spacing: -3px" class="fw-bold text-primary">Laporan Penjualan</h1>
+                                        <a href="print-pimpinan.php" class="btn btn-md btn-primary text-center px-3"><i class="fa-solid fa-print"></i> Print Laporan</a>
                                     </div>
+
+
                                     <div class="card-body">
                                         <div class="table table-responsive">
-                                            
+
                                             <table class="table table-bordered">
                                                 <thead>
                                                     <tr>
@@ -79,9 +85,9 @@ $queryDetail = mysqli_query($koneksi, "SELECT * FROM sales");
                                                             <td><?php echo $no++; ?></td>
                                                             <td><?php echo $rowDetail['trans_code'] ?></td>
                                                             <td><?php echo $rowDetail['trans_date'] ?></td>
-                                                            <td><?php echo "Rp. " . number_format($rowDetail['trans_paid'])?></td>
-                                                            <td><?php echo "Rp. " . number_format($rowDetail['trans_total_price'])?></td>
-                                                    
+                                                            <td><?php echo "Rp. " . number_format($rowDetail['trans_paid']) ?></td>
+                                                            <td><?php echo "Rp. " . number_format($rowDetail['trans_total_price']) ?></td>
+
                                                         </tr>
                                                     <?php endwhile ?>
                                                     <!-- <tr>
@@ -93,17 +99,15 @@ $queryDetail = mysqli_query($koneksi, "SELECT * FROM sales");
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
-                            <div class="text-center mt-3">
-                                <a href="print-pimpinan.php" class="btn btn-primary">Print Laporan</a>
-                            </div>
+
 
                         </div>
                     </div>
 
                     <!-- Tombol Print -->
-                    
+
                 </div>
 
                 <!-- / Content -->
