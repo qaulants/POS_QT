@@ -144,14 +144,14 @@
                 </a>
                 <ul class="menu-sub">
                     <li class="menu-item">
-                        <a href="kasir.php" class="menu-link" target="_blank">
+                        <a href="kasir.php" class="menu-link">
                             <div data-i18n="Basic">Kasir</div>
                         </a>
                     </li>
                 </ul>
                 <ul class="menu-sub">
                     <li class="menu-item">
-                        <a href="stok-produk.php" class="menu-link" target="_blank">
+                        <a href="stok-produk.php" class="menu-link">
                             <div data-i18n="Basic">Stok Produk</div>
                         </a>
                     </li>
@@ -169,14 +169,14 @@
                 </a>
                 <ul class="menu-sub">
                     <li class="menu-item">
-                        <a href="pimpinan.php" class="menu-link" target="_blank">
+                        <a href="pimpinan.php" class="menu-link">
                             <div data-i18n="Basic">Laporan Penjualan</div>
                         </a>
                     </li>
                 </ul>
                 <ul class="menu-sub">
                     <li class="menu-item">
-                        <a href="stok-produk.php" class="menu-link" target="_blank">
+                        <a href="stok-produk.php" class="menu-link">
                             <div data-i18n="Basic">Stok Produk</div>
                         </a>
                     </li>

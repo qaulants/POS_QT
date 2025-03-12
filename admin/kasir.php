@@ -55,10 +55,10 @@ if (isset($_GET['delete'])) {
                 <div class="content-wrapper">
                     <!-- Content -->
 
-                    <div class="container justify-content-center align-items-center" style="margin-top: 70px; margin-bottom: 70px;min-height: 100vh;">
+                    <div class="container justify-content-center align-items-center" style="margin-top: 20px; margin-bottom: 70px;min-height: 100vh;">
                         <div class="row justify-content-center align-items-center">
 
-                            <div class="col-10">
+                            <div class="col-12">
                                 <div class="card shadow-lg">
                                     <div class="card-header text-center">
                                         <h1 style="letter-spacing: -3px" class="fw-bold text-primary">Manage Kasir</h1>

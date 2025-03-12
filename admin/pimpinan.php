@@ -6,11 +6,6 @@ require_once "koneksi.php";
 
 $queryDetail = mysqli_query($koneksi, "SELECT * FROM sales");
 
-//Jika session nya isi, maka melempar ke dashboard.php
-// if(empty($_SESSION['nama']) && empty($_SESSION['email'])){
-//     header("Location: kasir.php");
-//     exit;
-// }
 ?>
 
 <html

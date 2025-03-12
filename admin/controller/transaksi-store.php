@@ -19,7 +19,7 @@ $kembalian = $_POST['trans_change'];
 
 // Menyimpan transaksi utama
 $queryPenjualan = mysqli_query($koneksi, "INSERT INTO sales (trans_code, trans_date, trans_total_price, trans_paid, trans_change) 
-                                          VALUES ('$trans_code', '$trans_date', $trans_total_price, '$nominal_bayar', '$kembalian')");
+VALUES ('$trans_code', '$trans_date', $trans_total_price, '$nominal_bayar', '$kembalian')");
 
 if ($queryPenjualan) {
     // Mendapatkan ID penjualan yang baru saja dimasukkan

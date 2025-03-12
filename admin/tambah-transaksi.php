@@ -4,41 +4,19 @@ session_regenerate_id(true);
 date_default_timezone_set("Asia/Jakarta");
 require_once "koneksi.php";
 
-
-
 // Waktu :
 $currentTime = date('Y-m-d');
 
 // generate function (method)
 function generateTransactionCode()
 {
-    $kode = date('dMyhis');
-
+    $kode = date('dMyhis'); //hari, bulan, tahun, jam, menit, detik
     return $kode;
 }
-// click count
-if (empty($_SESSION['click_count'])) {
-    $_SESSION['click_count'] = 0;
-}
-
 
 ?>
 
-
 <!DOCTYPE html>
-
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
 <html
     lang="en"
     class="light-style layout-menu-fixed"
@@ -80,7 +58,7 @@ if (empty($_SESSION['click_count'])) {
                     <!-- Content -->
 
                     <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-                        <div class="card p-4 shadow-lg" style="width: 80%; max-width: 1000px;">
+                        <div class="card p-4 shadow-lg" style="width: 100%; max-width: 1000px;">
                             <div class="card-header bg-primary opacity-50 text-center">
                                 <h1 class="fw-bold text-light">Add Transaction</h1>
                             </div>
@@ -115,9 +93,11 @@ if (empty($_SESSION['click_count'])) {
                                                     <th>Sub Total</th>
                                                 </tr>
                                             </thead>
+                                            
                                             <tbody id="tbody">
                                                 <!-- Data ditambah disini -->
                                             </tbody>
+
                                             <tfoot class="text-center">
                                                 <tr>
                                                     <th colspan="6">Total Harga</th>
@@ -145,18 +125,21 @@ if (empty($_SESSION['click_count'])) {
                             </div>
                         </div>
                     </div>
+
                     <?php
                     $query = mysqli_query($koneksi, "SELECT * FROM categories");
                     $categories = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     ?>
+
                     <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             //Fungsi tambah baris
                             const button = document.getElementById('counterBtn');
-                            const countDisplay = document.getElementById('countDisplay');
+                            // const countDisplay = document.getElementById('countDisplay');
                             const tbody = document.getElementById('tbody');
-                            const table = document.getElementById('table');
+                            // const table = document.getElementById('table');
 
                             let no = 0;
                             button.addEventListener('click', function() {
@@ -182,7 +165,6 @@ if (empty($_SESSION['click_count'])) {
                                 newRow += "</tr>";
 
                                 tbody.insertAdjacentHTML('beforeend', newRow);
-
 
                                 attachCategoryChangeListener();
                                 attachItemChangeListener();
@@ -312,32 +294,7 @@ if (empty($_SESSION['click_count'])) {
                     <!-- / Content -->
 
                     <!-- Footer -->
-                    <footer class="content-footer footer bg-footer-theme">
-                        <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                            <div class="mb-2 mb-md-0">
-                                ©
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script>
-                                , made with ❤️ by
-                                <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
-                            </div>
-                            <div>
-                                <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                                <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                                <a
-                                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                                    target="_blank"
-                                    class="footer-link me-4">Documentation</a>
-
-                                <a
-                                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                                    target="_blank"
-                                    class="footer-link me-4">Support</a>
-                            </div>
-                        </div>
-                    </footer>
+                    <?php include 'inc/footer.php' ?>
                     <!-- / Footer -->
 
                     <div class="content-backdrop fade"></div>
@@ -351,28 +308,7 @@ if (empty($_SESSION['click_count'])) {
             <div class="layout-overlay layout-menu-toggle"></div>
         </div>
         <!-- / Layout wrapper -->
-
         <!-- Core JS -->
-        <!-- build:js assets/vendor/js/core.js -->
-        <script src="../assets/admin/assets/admin/assets/vendor/libs/jquery/jquery.js"></script>
-        <script src="../assets/admin/assets/vendor/libs/popper/popper.js"></script>
-        <script src="../assets/admin/assets/vendor/js/bootstrap.js"></script>
-        <script src="../assets/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-        <script src="../assets/admin/assets/vendor/js/menu.js"></script>
-        <!-- endbuild -->
-
-        <!-- Vendors JS -->
-        <script src="../assets/admin/assets/vendor/libs/apex-charts/apexcharts.js"></script>
-
-        <!-- Main JS -->
-        <script src="../assets/admin/assets/js/main.js"></script>
-
-        <!-- Page JS -->
-        <script src="../assets/admin/assets/js/dashboards-analytics.js"></script>
-
-        <!-- Place this tag in your head or just before your close body tag. -->
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <?php include 'inc/js.php' ?>
 </body>
-
 </html>
