@@ -1,11 +1,11 @@
-## Point of Sales
+# Point of Sales
 
 ![image](https://github.com/user-attachments/assets/aa8e52b7-b7c7-4a87-ae5b-48821260e95f)
 
 
 ## Tampilan Admin
 
-## Admin dapat mengelola user, level, kategori, dan produk
+### Admin dapat mengelola user, level, kategori, dan produk
 
 ![image](https://github.com/user-attachments/assets/bd4f5f05-f179-46b2-bda4-dff87123d170)
 
@@ -20,7 +20,7 @@
 
 ## Tampilan Kasir
 
-## Kasir dapat melakukan transaksi dan melihat stok produk
+### Kasir dapat melakukan transaksi dan melihat stok produk
 
 
 ![image](https://github.com/user-attachments/assets/4fa8c451-d5be-4bda-97e4-9ad93a0d28d0)
@@ -43,7 +43,7 @@
 
 ## Tampilan Pimpinan
 
-# Pimpinan hanya dapat melihat laporan data penjualan dan mencetak laporan data penjualan
+### Pimpinan hanya dapat melihat laporan data penjualan dan mencetak laporan data penjualan
 
 
 ![image](https://github.com/user-attachments/assets/24b1b1ea-3393-4b42-bf25-f1cd193242d4)
