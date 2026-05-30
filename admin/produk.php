@@ -76,7 +76,9 @@ $produk = mysqli_query($koneksi, "SELECT categories.category_name, products.* FR
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card">
-                                    <div class="card-header">Produk</div>
+                                    <div class="card-header">
+                                        <h5>Produk</h5>
+                                    </div>
                                     <div class="card-body">
                                         <?php if (isset($_GET['hapus'])): ?>
                                             <div class="alert alert-success" role="alert">
@@ -106,7 +108,7 @@ $produk = mysqli_query($koneksi, "SELECT categories.category_name, products.* FR
                                                         <td><?php echo $row['category_name'] ?></td>
                                                         <td><?php echo $row['product_name'] ?></td>
                                                         <td><?php echo $row['product_qty'] ?></td>
-                                                        <td><?php echo "Rp. " . number_format($row['product_price'])?></td>
+                                                        <td><?php echo "Rp. " . number_format($row['product_price']) ?></td>
                                                         <td><?php echo $row['description'] ?></td>
                                                         <td>
                                                             <a href="tambah-produk.php?edit=<?php echo $row['id'] ?>" class="btn btn-success btn-sm">

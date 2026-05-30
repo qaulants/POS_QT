@@ -60,15 +60,19 @@ if (isset($_GET['delete'])) {
 
                             <div class="col-12">
                                 <div class="card shadow-lg">
-                                    <div class="card-header text-center">
-                                        <h1 style="letter-spacing: -3px" class="fw-bold text-primary">Manage Kasir</h1>
+                                    <div class="card-header">
+                                        <h5>Produk</h5>
                                     </div>
                                     <div class="card-body">
-                                        <div class="table table-responsive">
-                                            <div class="mt-2 mb-3">
-                                                <a href="tambah-transaksi.php" class="btn btn-primary"
-                                                    style="border-radius: 20px">Tambah Transaksi</a>
+                                        <?php if (isset($_GET['hapus'])): ?>
+                                            <div class="alert alert-success" role="alert">
+                                                Data berhasil dihapus
                                             </div>
+                                        <?php endif ?>
+                                        <div align="right" class="mb-3">
+                                            <a href="tambah-transaksi.php" class="btn btn-primary">Tambah Transaksi</a>
+                                        </div>
+                                        <div class="table table-responsive">
                                             <table class="table table-bordered">
                                                 <thead>
                                                     <tr>

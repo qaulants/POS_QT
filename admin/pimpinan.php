@@ -60,7 +60,7 @@ $queryDetail = mysqli_query($koneksi, "SELECT * FROM sales");
                                         <h1 style="letter-spacing: -3px" class="fw-bold text-primary">Laporan Penjualan</h1>
                                     </div> -->
                                     <div class="card-header text-center d-flex justify-content-between align-items-center">
-                                        <h1 style="letter-spacing: -3px" class="fw-bold text-primary">Laporan Penjualan</h1>
+                                        <h5>Laporan Penjualan</h5>
                                         <a href="print-pimpinan.php" class="btn btn-md btn-primary text-center px-3"><i class="fa-solid fa-print"></i> Print Laporan</a>
                                     </div>
 

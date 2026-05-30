@@ -60,7 +60,9 @@ if (isset($_GET['delete'])) {
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card">
-                                    <div class="card-header">Kategori</div>
+                                    <div class="card-header">
+                                        <h5>Kategori</h5>
+                                    </div>
                                     <div class="card-body">
                                         <?php if (isset($_GET['hapus'])): ?>
                                             <div class="alert alert-success" role="alert">
@@ -121,7 +123,7 @@ if (isset($_GET['delete'])) {
         <!-- / Layout wrapper -->
 
         <!-- Core JS -->
-       <?php include 'inc/js.php'?>
+        <?php include 'inc/js.php' ?>
 </body>
 
 </html>

@@ -68,7 +68,7 @@ $produk = mysqli_query($koneksi, "SELECT categories.category_name, products.* FR
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card">
-                                    <div class="card-header">Stok Produk</div>
+                                    <div class="card-header"><h5>Stok Produk</h5></div>
                                     <div class="card-body">
                                         
                                         <table class="table table-bordered">

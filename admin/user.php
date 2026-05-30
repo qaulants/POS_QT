@@ -75,7 +75,9 @@ $user = mysqli_query($koneksi, "SELECT levels.level_name, users.* FROM users LEF
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card">
-                                    <div class="card-header">Data User</div>
+                                    <div class="card-header">
+                                        <h5>Data User</h5>
+                                    </div>
                                     <div class="card-body">
                                         <?php if (isset($_GET['hapus'])): ?>
                                             <div class="alert alert-success" role="alert">

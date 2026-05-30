@@ -1,7 +1,7 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="index.php" class="app-brand-link">
-            
+
             <span class="app-brand-text demo menu-text fw-bolder ms-2">Point of Sales</span>
         </a>
 
@@ -91,7 +91,7 @@
         <?php if ($_SESSION['id_level'] == 2) :  ?>
             <li class="menu-item">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                    <i class="menu-icon tf-icons bx bx-wallet"></i>
                     <div data-i18n="Authentications">Transaksi</div>
                 </a>
                 <ul class="menu-sub">
@@ -116,7 +116,7 @@
         <?php if ($_SESSION['id_level'] == 3) :  ?>
             <li class="menu-item">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                    <i class="menu-icon tf-icons bx bx-file"></i>
                     <div data-i18n="Authentications">Data Penjualan</div>
                 </a>
                 <ul class="menu-sub">
