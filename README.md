@@ -7,7 +7,7 @@
 
 ### Admin dapat mengelola user, level, kategori, dan produk
 
-![image](https://github.com/user-attachments/assets/bd4f5f05-f179-46b2-bda4-dff87123d170)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/82fcd710-de4e-4d1a-a9e1-5d9738a96d4c" />
 
 ![image](https://github.com/user-attachments/assets/dfb3597e-9f24-4b93-a0e9-52035c9f4837)
 
